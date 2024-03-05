@@ -1,8 +1,8 @@
 import { ChatGoogleGenerativeAI,GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { TaskType } from "@google/generative-ai";
+import { prompting } from "./prompts";
 import { config } from "dotenv";
 import { chain } from "./chain";
-import { prompting } from "./prompts";
 
 //loading api keys
 config();
