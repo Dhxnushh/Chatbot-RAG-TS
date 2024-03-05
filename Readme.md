@@ -22,3 +22,8 @@ This project is geared towards data scientists, web developers, and anyone who n
 * Typescript
 * LangChain library(js)
 * Check package.json for the rest of the dependencies.
+
+**Customizability:**
+
+*Go to webloader.ts file in the src folder
+*Change the website URL to What ever website you want to scrape and get data from.
