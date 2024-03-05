@@ -5,6 +5,7 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { vectordata } from "./vector";
 
 
+//Creating chain function
 export async function chain(
   model: ChatGoogleGenerativeAI,
   embedding: GoogleGenerativeAIEmbeddings

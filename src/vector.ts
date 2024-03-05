@@ -2,6 +2,7 @@ import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { getDocs } from "./webloader";
 
+//Create vectordata function
 export async function vectordata(model:GoogleGenerativeAIEmbeddings) {
     //check webloader.ts for getDocs().
     const docs = await getDocs();
