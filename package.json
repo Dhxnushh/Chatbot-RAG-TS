@@ -1,0 +1,23 @@
+{
+  "name": "chatbot-ragjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rd ./build && tsc && node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@langchain/community": "^0.0.34",
+    "@langchain/core": "^0.1.40",
+    "@langchain/google-genai": "^0.0.10",
+    "@types/node": "^20.11.24",
+    "cheerio": "1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "langchain": "^0.1.25",
+    "typescript": "^5.3.3"
+  }
+}
