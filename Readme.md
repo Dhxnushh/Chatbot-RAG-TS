@@ -23,6 +23,13 @@ This project is geared towards data scientists, web developers, and anyone who n
 * LangChain library(js)
 * Check package.json for the rest of the dependencies.
 
+**Initializing:**
+
+* Create a new .env file.
+* Load your google api key from google ai studio and name it 'GOOGLE_API_KEY'="your api key".
+* Import config from dotenv where you are initializing the model.
+* Call the config() function.
+
 **Customizability:**
 
 * Go to webloader.ts file in the src folder.
