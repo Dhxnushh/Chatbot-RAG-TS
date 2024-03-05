@@ -34,19 +34,17 @@ const readline = require("readline").createInterface({
 });
 function prompting() {
     return __awaiter(this, void 0, void 0, function* () {
-        while (true) {
-            let qn = String;
-            readline.question("Ask question[Press Q to exit]: ", (qn) => __awaiter(this, void 0, void 0, function* () {
-                if ((qn == "q") || (qn == "Q")) {
-                    console.log("Exiting chat.Thank you!"), readline.close();
-                    return;
-                }
-                const res = (yield retrieverchain).invoke({
-                    input: qn,
-                });
-                console.log((yield res).answer), readline.close();
-            }));
-        }
+        let qn = String;
+        readline.question("Ask question[Press Q to exit]: ", (qn) => __awaiter(this, void 0, void 0, function* () {
+            if ((qn == "q") || (qn == "Q")) {
+                console.log("Exiting chat.Thank you!"), readline.close();
+                return;
+            }
+            const res = (yield retrieverchain).invoke({
+                input: qn,
+            });
+            console.log((yield res).answer), readline.close();
+        }));
     });
 }
 ;
