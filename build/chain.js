@@ -14,6 +14,7 @@ const combine_documents_1 = require("langchain/chains/combine_documents");
 const retrieval_1 = require("langchain/chains/retrieval");
 const prompts_1 = require("@langchain/core/prompts");
 const vector_1 = require("./vector");
+//Creating chain function
 function chain(model, embedding) {
     return __awaiter(this, void 0, void 0, function* () {
         //check vector.ts for vectordata().

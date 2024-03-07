@@ -10,24 +10,29 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.prompting = void 0;
+//Creating input function
 const readline = require("readline").createInterface({
     input: process.stdin,
     output: process.stdout,
 });
+//Function for prompting
 function prompting(chain) {
     return __awaiter(this, void 0, void 0, function* () {
         let qn = String;
+        //Asking for input
         readline.question("Ask question[Press Q to exit]: ", (qn) => __awaiter(this, void 0, void 0, function* () {
-            if ((qn == "q") || (qn == "Q")) {
+            //Quit statement
+            if (qn == "q" || qn == "Q") {
                 console.log("Exiting chat.Thank you!"), readline.close();
                 return;
             }
+            //Invoke model
             const res = (yield chain).invoke({
                 input: qn,
             });
+            //Display answer
             console.log((yield res).answer), readline.close();
         }));
     });
 }
 exports.prompting = prompting;
-;

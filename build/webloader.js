@@ -15,8 +15,10 @@ const text_splitter_1 = require("langchain/text_splitter");
 //Scrapping the web and geting a document.
 function getDocs() {
     return __awaiter(this, void 0, void 0, function* () {
-        const loader = new cheerio_1.CheerioWebBaseLoader("https://www.businessinsider.in/business");
+        //loading data from website and turning into document
+        const loader = new cheerio_1.CheerioWebBaseLoader("https://sathyabama.ac.in/about-us");
         const docs = yield loader.load();
+        //splitting docs
         const splitter = new text_splitter_1.RecursiveCharacterTextSplitter();
         const splitDocs = yield splitter.splitDocuments(docs);
         return splitDocs;

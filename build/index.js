@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const google_genai_1 = require("@langchain/google-genai");
 const generative_ai_1 = require("@google/generative-ai");
+const prompts_1 = require("./prompts");
 const dotenv_1 = require("dotenv");
 const chain_1 = require("./chain");
-const prompts_1 = require("./prompts");
 //loading api keys
 (0, dotenv_1.config)();
 //initializing models.
